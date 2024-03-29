@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Musikdata</title>
+    <link rel="stylesheet" th:href="@{/CSS/musikdata.css}">
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Artist</th>
+        <th>Oprindelsesland</th>
+        <th>Genre</th>
+        <th>Albumnavn</th>
+        <th>Sange</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="musikData : ${musikDataList}">
+        <td th:text="${musikData.artist}"></td>
+        <td th:text="${musikData.origin}"></td>
+        <td th:text="${musikData.genre}"></td>
+        <td th:text="${musikData.albumName}"></td>
+        <td>
+            <ul>
+                <li th:each="song : ${musikData.songs}" th:text="${song}"></li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
