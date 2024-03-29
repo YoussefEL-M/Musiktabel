@@ -1,12 +1,22 @@
-package com.example.demo.Service;
+package com.example.demo.Model;
 
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class MusikData {
+
+    @Id
     private String artist;
     private String origin;
     private String genre;
     private String albumName;
+
+    @ElementCollection
     private List<String> songs;
 
     public MusikData(String artist, String origin, String genre, String albumName, List<String> songs) {
@@ -15,6 +25,10 @@ public class MusikData {
         this.genre = genre;
         this.albumName = albumName;
         this.songs = songs;
+    }
+
+    public MusikData() {
+        this.songs = new ArrayList<>();
     }
 
     public List<String> getSongs() {
