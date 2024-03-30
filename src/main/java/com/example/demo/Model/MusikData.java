@@ -15,15 +15,17 @@ public class MusikData {
     private String origin;
     private String genre;
     private String albumName;
+    private int year;
 
     @ElementCollection
     private List<String> songs;
 
-    public MusikData(String artist, String origin, String genre, String albumName, List<String> songs) {
+    public MusikData(String artist, String origin, String genre, String albumName, int year, List<String> songs) {
         this.artist = artist;
         this.origin = origin;
         this.genre = genre;
         this.albumName = albumName;
+        this.year = year;
         this.songs = songs;
     }
 
@@ -69,6 +71,13 @@ public class MusikData {
 
     public void setArtist(String artist) {
         this.artist = artist;
+    }
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
     }
 }
 

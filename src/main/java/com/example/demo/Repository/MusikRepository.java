@@ -22,21 +22,21 @@ public class MusikRepository {
 
         return jdbcTemplate.query(sql,rowMapper);
     }
-/*
+
     public int getMinYear(){
-        String sql = "SELECT MIN(year) FROM music.data";
-        return jdbcTemplate.queryForObject(sql,Integer.class);
+        String sql = "SELECT MIN(year) FROM musikdata";
+        return jdbcTemplate.queryForObject(sql, Integer.class);
     }
 
     public int getMaxYear(){
-        String sql = "SELECT MAX(year) FROM music.data";
-        return jdbcTemplate.queryForObject(sql,Integer.class);
+        String sql = "SELECT MAX(year) FROM musikdata";
+        return jdbcTemplate.queryForObject(sql, Integer.class);
     }
 
     public double getAvgYear(){
-        String sql = "SELECT AVG(year) FROM music.data";
+        String sql = "SELECT ROUND(AVG(year)) FROM musikdata";
         return jdbcTemplate.queryForObject(sql, Double.class);
-    }*/
+    }
 
 
 }

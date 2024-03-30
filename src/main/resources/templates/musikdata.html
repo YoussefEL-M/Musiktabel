@@ -13,6 +13,7 @@
         <th>Oprindelsesland</th>
         <th>Genre</th>
         <th>Albumnavn</th>
+        <th>Udgivelses år</th>
         <th>Sange</th>
     </tr>
     </thead>
@@ -22,6 +23,7 @@
         <td th:text="${musikData.origin}"></td>
         <td th:text="${musikData.genre}"></td>
         <td th:text="${musikData.albumName}"></td>
+        <td th:text="${musikData.year}"></td>
         <td>
             <ul>
                 <li th:each="song : ${musikData.songs}" th:text="${song}"></li>
@@ -34,21 +36,21 @@
 <table>
     <thead>
     <tr>
-        <th>Statistic</th>
-        <th>Year</th>
+        <th>Statistik</th>
+        <th>Årstal</th>
     </tr>
     </thead>
     <tbody>
     <tr>
-        <td>Minimum Year:</td>
+        <td>Ældste Album år:</td>
         <td th:text="${minYear}"></td>
     </tr>
     <tr>
-        <td>Maximum Year:</td>
+        <td>Nyeste Album Year:</td>
         <td th:text="${maxYear}"></td>
     </tr>
     <tr>
-        <td>Average Year:</td>
+        <td>Gennemsnitet:</td>
         <td th:text="${avgYear}"></td>
     </tr>
     </tbody>

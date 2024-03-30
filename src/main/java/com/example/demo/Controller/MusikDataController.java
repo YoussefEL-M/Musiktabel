@@ -17,6 +17,10 @@ public class MusikDataController {
     @GetMapping("/musikdata")
     public String getMusikData(Model model) {
         model.addAttribute("musikDataList", musikService.getAll());
+        model.addAttribute("minYear", musikService.getMinYear());
+        model.addAttribute("maxYear", musikService.getMaxYear());
+        model.addAttribute("avgYear", musikService.getAvgYear());
+
         return "musikdata";
     }
 }

@@ -15,5 +15,13 @@ public class MusikService {
     public List<MusikData> getAll() {
         return musikRepository.getMusikData();
     }
+    public int getMinYear(){
+        return musikRepository.getMinYear();
+    }public int getMaxYear(){
+        return musikRepository.getMaxYear();
+    }public double getAvgYear(){
+        return musikRepository.getAvgYear();
+    }
+
 
 }
