@@ -11,16 +11,32 @@ import java.util.List;
 public class MusikData {
 
     @Id
+    private int id;
+
     private String artist;
     private String origin;
     private String genre;
     private String albumName;
     private int year;
 
-    @ElementCollection
-    private List<String> songs;
+   // @ElementCollection
+    private String songs;
 
-    public MusikData(String artist, String origin, String genre, String albumName, int year, List<String> songs) {
+    public MusikData(int id,String artist, String origin, String genre, String albumName, int year, String songs) {
+        this.id = id;
+        this.artist = artist;
+        this.origin = origin;
+        this.genre = genre;
+        this.albumName = albumName;
+        this.year = year;
+        this.songs = songs;
+    }
+
+
+   /* public MusikData() {
+        this.songs = new ArrayList<>();
+    }*/
+    public MusikData(String artist, String origin, String genre, String albumName, int year, String songs){
         this.artist = artist;
         this.origin = origin;
         this.genre = genre;
@@ -30,14 +46,22 @@ public class MusikData {
     }
 
     public MusikData() {
-        this.songs = new ArrayList<>();
+
     }
 
-    public List<String> getSongs() {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getSongs() {
         return songs;
     }
 
-    public void setSongs(List<String> songs) {
+    public void setSongs(String songs) {
         this.songs = songs;
     }
 

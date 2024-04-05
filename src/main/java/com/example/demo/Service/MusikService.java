@@ -22,6 +22,20 @@ public class MusikService {
     }public double getAvgYear(){
         return musikRepository.getAvgYear();
     }
+    public void create(MusikData musikData){
+        musikRepository.create(musikData);
+    }
 
+    public void delete(int id){
+        musikRepository.delete(id);
+    }
+
+    public MusikData findById(int id){
+        return musikRepository.findById(id);
+    }
+
+    public void update(MusikData musikData){
+        musikRepository.update(musikData);
+    }
 
 }

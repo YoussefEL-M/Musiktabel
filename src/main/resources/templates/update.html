@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdater</title>
+  <link rel="stylesheet" th:href="@{/CSS/musikdata.css}">
+</head>
+<body>
+<h1>Opdater album</h1>
+
+
+<div class="updateForm">
+  <form action="/update" method="post">
+
+    <input name="id" type="number" hidden th:value="${musikDataList.id}">
+
+    <label for="artist-field">Artist</label>
+    <input id="artist-field" name="artist" type="text" th:value="${musikDataList.artist}">
+
+    <label for="origin-field">Oprindelsesland</label>
+    <input id="origin-field" name="origin" type="text" th:value="${musikDataList.origin}">
+
+    <label for="genre-field">Genre</label>
+    <input id="genre-field" name="genre" type="text" th:value="${musikDataList.genre}">
+
+    <label for="albumName-field">Album Navn</label>
+    <input id="albumName-field" name="albumName" type="text" th:value="${musikDataList.albumName}">
+
+    <label for="year-field">Udgivelses År</label>
+    <input id="year-field" name="year" type="text" th:value="${musikDataList.year}">
+
+    <label for="songs-field">Sange</label>
+    <input id="songs-field" name="songs" type="text" th:value="${musikDataList.songs}">
+
+    <input type="submit" value="Opret album">
+
+  </form>
+</div>
+
+</body>
+</html>

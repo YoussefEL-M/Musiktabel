@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Opret ny album</title>
+    <link rel="stylesheet" th:href="@{/CSS/musikdata.css}">
+</head>
+<body>
+<div class="createForm">
+    <h1>Opret et nyt album</h1>
+
+    <form action="/create" method="post">
+        <label for="artist-field">Artist</label>
+        <input id="artist-field" name="artist" type="text">
+
+        <label for="origin-field">Oprindelsesland</label>
+        <input id="origin-field" name="origin" type="text">
+
+        <label for="genre-field">Genre</label>
+        <input id="genre-field" name="genre" type="text">
+
+        <label for="albumName-field">Album Navn</label>
+        <input id="albumName-field" name="albumName" type="text">
+
+        <label for="year-field">Udgivelses År</label>
+        <input id="year-field" name="year" type="text">
+
+        <label for="songs-field">Sange</label>
+        <input id="songs-field" name="songs" type="text">
+
+        <input type="submit" value="Opret album">
+
+    </form>
+</div>
+</body>
+</html>

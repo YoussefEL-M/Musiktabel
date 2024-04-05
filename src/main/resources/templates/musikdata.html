@@ -15,6 +15,8 @@
         <th>Albumnavn</th>
         <th>Udgivelses år</th>
         <th>Sange</th>
+        <th>Opdater</th>
+        <th>Slet</th>
     </tr>
     </thead>
     <tbody>
@@ -29,6 +31,8 @@
                 <li th:each="song : ${musikData.songs}" th:text="${song}"></li>
             </ul>
         </td>
+        <td> <a th:href="@{'/update/' + ${musikData.id}}" href="/update.html">Opdater</a> </td>
+        <td> <a th:href="@{'/delete/' + ${musikData.id}}" href="/musikdata.html">Slet</a> </td>
     </tr>
     </tbody>
 </table>
@@ -55,6 +59,10 @@
     </tr>
     </tbody>
 </table>
+<div class="create">
+    <h2>Opret nyt album</h2>
+    <a href="create.html" th:href="@{/create}">Klik her for at oprette nyt album</a>
+</div>
 
 </body>
 </html>
